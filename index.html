@@ -842,33 +842,38 @@
 														</ul>
 													</div>
 												</div>
-												<div class="additional_images">
-													<ul>
-														<li>
-															<div class="list_inner">
-																<div class="my_image">
-																	<img src="assets/img/thumbs/4-2.jpg" alt="" />
-																	<div class="main" data-img-url="assets/img/portfolio/5.jpg"></div>
-																</div>
-															</div>
-														</li>
-														<li>
-															<div class="list_inner">
-																<div class="my_image">
-																	<img src="assets/img/thumbs/4-2.jpg" alt="" />
-																	<div class="main" data-img-url="assets/img/portfolio/6.jpg"></div>
-																</div>
-															</div>
-														</li>
-														<li>
-															<div class="list_inner">
-																<div class="my_image">
-																	<img src="assets/img/thumbs/4-2.jpg" alt="" />
-																	<div class="main" data-img-url="assets/img/portfolio/7.jpg"></div>
-																</div>
-															</div>
-														</li>
-													</ul>
+												<div>
+													<div class="slideshow-container">
+
+														<div class="imageSlides fade">
+															<div class="numbertext">1 / 3</div>
+															<img src="assets/img/portfolio/5.jpg" style="width:100%">
+
+														</div>
+
+														<div class="imageSlides fade">
+															<div class="numbertext">2 / 3</div>
+															<img src="assets/img/portfolio/5.jpg" style="width:100%">
+
+														</div>
+
+														<div class="imageSlides fade">
+															<div class="numbertext">3 / 3</div>
+															<img src="assets/img/portfolio/5.jpg" style="width:100%">
+
+														</div>
+
+														<a class="prev" onclick="plusSlides(-1)">❮</a>
+														<a class="next" onclick="plusSlides(1)">❯</a>
+
+													</div>
+													<br>
+
+													<div style="text-align:center">
+														<span class="dot" onclick="currentSlide(1)"></span>
+														<span class="dot" onclick="currentSlide(2)"></span>
+														<span class="dot" onclick="currentSlide(3)"></span>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -1327,6 +1332,49 @@
 <!--[if lt IE 10]> <script type="text/javascript" src="js/ie8.js"></script> <![endif]-->	
 <script src="assets/js/plugins.js"></script>
 <script src="assets/js/init.js"></script>
+<script>
+	let slideIndex = 0;
+	
+    
+	showSlides(slideIndex);
+	function plusSlides(n) {
+		let slides = document.querySelectorAll(".elisc_tm_modalbox.opened .imageSlides");
+		slideIndex += n;
+		console.log("slides length..", slides.length);
+		console.log(slides)
+		// If slideIndex is greater than the number of slides, reset to the first slide
+		if (slideIndex >= slides.length) {
+			slideIndex = 1;
+		}
+
+		// If slideIndex is less than 1, set it to the last slide
+		if (slideIndex < 0) {
+			slideIndex = slides.length;
+		}
+		console.log("slideindex..", slideIndex);
+		showSlides(slideIndex);
+	}
+
+
+	function currentSlide(n) {
+		showSlides(n);
+	}
+
+	function showSlides(slideIndex) {
+		let slides = document.querySelectorAll(".elisc_tm_modalbox.opened .imageSlides");
+		let i;
+		let dots = document.getElementsByClassName("dot");
+
+		for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";
+		}
+		for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+		}
+		slides[slideIndex].style.display = "block";
+		dots[slideIndex].className += " active";
+	}
+</script>
 <!-- /SCRIPTS -->
 
 </body>
