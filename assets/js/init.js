@@ -287,6 +287,7 @@ function elisc_tm_modalbox_portfolio(){
 		
 		modalBox.addClass('opened');
 		modalBox.find('.description_wrap').html(details);
+		new Glide('.glide').mount();
 		modalBox.find('.popup_details').prepend('<div class="top_image"><img src="assets/img/thumbs/4-2.jpg" alt="" /><div class="main" data-img-url="'+image+'"></div></div>');
 		modalBox.find('.popup_details .top_image').after('<div class="portfolio_main_title"><span class="category">'+category+'</span><h3 class="title">'+title+'</h3></div>');	
 		elisc_tm_data_images();
