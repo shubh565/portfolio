@@ -13,6 +13,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+
 <title>Elisc</title>
 
 <!-- STYLES -->
@@ -24,6 +25,33 @@
 <link rel="stylesheet" type="text/css" href="assets/css/custom.css" />
 <link rel="stylesheet" type="text/css" href="assets/css/modalbox.css" />
 <link rel="stylesheet" type="text/css" href="assets/css/main.css" />
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+	const swiper = new Swiper('.swiper', {
+		// Optional parameters
+		direction: 'horizontal',
+		loop: true,
+
+		// If we need pagination
+		pagination: {
+			el: '.swiper-pagination',
+		},
+
+		// Navigation arrows
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+
+		// And if we need scrollbar
+		scrollbar: {
+			el: '.swiper-scrollbar',
+		},
+	});
+</script>
 <!--[if lt IE 9]> <script type="text/javascript" src="js/modernizr.custom.js"></script> <![endif]-->
 <!-- /STYLES -->
 
@@ -741,6 +769,7 @@
 				<!-- /SERVICES -->
 				
 				<!-- PORTFOLIO -->
+				
 				<div class="elisc_tm_section" id="portfolio">
 					<div class="elisc_tm_portfolio w-full float-left pt-[120px]">
 						<div class="tm_content w-full max-w-[1250px] h-auto clear-both my-0 mx-auto py-0 px-[20px]">
@@ -749,133 +778,179 @@
 									<span class="w-full float-left font-medium uppercase inline-block mb-[12px]">- Projects</span>
 									<h3 class="text-[40px] font-extrabold">Recent completed works</h3>
 								</div>
-								<div class="buttons">
+								<!-- <div class="buttons">
 									<a class="prev_button" href="#"><img class="svg" src="assets/img/svg/prev.svg" alt="" /></a>
 									<a class="next_button" href="#"><img class="svg" src="assets/img/svg/next.svg" alt="" /></a>
-								</div>
+								</div> -->
 							</div>
-							<div class="portfolio_list w-full float-left mt-[40px] mb-[120px]">
-								<ul class="owl-carousel gallery_zoom mb-[65px]">
-									<li>
-										<div class="list_inner">
-											<div class="image relative rounded-[4px] overflow-hidden mb-[25px]">
-												<img class="min-w-full relative opacity-0" src="assets/img/thumbs/31-36.jpg" alt="" />
-												<div class="main absolute inset-0 bg-no-repeat bg-cover bg-center" data-img-url="assets/img/portfolio/1.jpg"></div>
-												<a class="elisc_tm_full_link popup-youtube absolute inset-0 z-[5]" href="https://www.youtube.com/watch?v=7e90gBu4pas"></a>
-											</div>
-											<div class="details w-full float-left">
-												<span class="category inline-block mb-[7px]"><a class="inline-block uppercase text-[#55527C] font-medium" href="#">Youtube</a></span>
-												<h3 class="title"><a class="line_effect popup-youtube font-semibold text-[24px] text-[#130F49]" href="https://www.youtube.com/watch?v=7e90gBu4pas">New Technology</a></h3>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="list_inner">
-											<div class="image relative rounded-[4px] overflow-hidden mb-[25px]">
-												<img class="min-w-full relative opacity-0" src="assets/img/thumbs/31-36.jpg" alt="" />
-												<div class="main absolute inset-0 bg-no-repeat bg-cover bg-center" data-img-url="assets/img/portfolio/2.jpg"></div>
-												<a class="elisc_tm_full_link popup-vimeo absolute inset-0 z-[5]" href="https://vimeo.com/337293658"></a>
-											</div>
-											<div class="details w-full float-left">
-												<span class="category inline-block mb-[7px]"><a href="#">Vimeo</a></span>
-												<h3 class="title"><a class="line_effect popup-vimeo" href="https://vimeo.com/337293658">Firogo Majestic Ltd.</a></h3>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="list_inner">
-											<div class="image relative rounded-[4px] overflow-hidden mb-[25px]">
-												<img class="min-w-full relative opacity-0" src="assets/img/thumbs/31-36.jpg" alt="" />
-												<div class="main absolute inset-0 bg-no-repeat bg-cover bg-center" data-img-url="assets/img/portfolio/3.jpg"></div>
-												<a class="elisc_tm_full_link soundcloude_link mfp-iframe audio absolute inset-0 z-[5]" href="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/471954807&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></a>
-											</div>
-											<div class="details w-full float-left">
-												<span class="category inline-block mb-[7px]"><a href="#">Soundcloud</a></span>
-												<h3 class="title"><a class="line_effect soundcloude_link mfp-iframe audio" href="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/471954807&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">Creative Building</a></h3>
-											</div>
-										</div>
-									</li>
-									<li>
-										<div class="list_inner">
-											<div class="image relative rounded-[4px] overflow-hidden mb-[25px]">
-												<img class="min-w-full relative opacity-0" src="assets/img/thumbs/31-36.jpg" alt="" />
-												<div class="main absolute inset-0 bg-no-repeat bg-cover bg-center" data-img-url="assets/img/portfolio/4.jpg"></div>
-												<a class="elisc_tm_full_link portfolio_popup absolute inset-0 z-[5]" href="#"></a>
-											</div>
-											<div class="details w-full float-left">
-												<span class="category inline-block mb-[7px]"><a href="#">Modalbox</a></span>
-												<h3 class="title"><a class="line_effect portfolio_popup" href="#">Beautiful Boat</a></h3>
-											</div>
-										</div>
-										
-										<!-- Modalbox Info Start -->
-										<div class="hidden_content_portfolio">
-											<div class="popup_details">
-												<div class="main_details">
-													<div class="textbox">
-														<p>We live in a world where we need to move quickly and iterate on our ideas as flexibly as possible. Building mockups strikes the ideal balance ease of modification. Building mockups strikes the ideal balance ease of modification.</p>
-														<p>Mockups are useful both for the creative phase of the project - for instance when you're trying to figure out your user flows or the proper visual hierarchy - and the production phase when they phase when they will represent the target product. Building mockups strikes the ideal balance ease of modification.</p>
+							<div class="portfolio_list w-full float-left mt-[40px] mb-[80px]">
+								<div class="tab">
+									<button class="tablinks" onclick="openProjectType(event, 'Type1')">Project Type 1</button>
+									<button class="tablinks" onclick="openProjectType(event, 'Type2')">Project Type 2</button>
+									</div>
+								<br>
+								<div id="Type1" class="tabcontent">
+									<ul class="owl-carousel gallery_zoom mb-[65px]">
+											<li>
+												<div class="list_inner">
+													<div class="image relative rounded-[4px] overflow-hidden mb-[25px]">
+														<img class="min-w-full relative opacity-0" src="assets/img/thumbs/31-36.jpg" alt="" />
+														<div class="main absolute inset-0 bg-no-repeat bg-cover bg-center" data-img-url="assets/img/portfolio/4.jpg">
+														</div>
+														<a class="elisc_tm_full_link portfolio_popup absolute inset-0 z-[5]" href="#"></a>
 													</div>
-													<div class="detailbox">
-														<ul>
-															<li>
-																<span class="first">Client</span>
-																<span>Alvaro Morata</span>
-															</li>
-															<li>
-																<span class="first">Category</span>
-																<span><a href="#">Modalbox</a></span>
-															</li>
-															<li>
-																<span class="first">Date</span>
-																<span>April 10, 2023</span>
-															</li>
-															<li>
-																<span class="first">Share</span>
-																<ul class="share">
-																	<li><a href="#"><img class="svg" src="assets/img/svg/social/facebook.svg" alt="" /></a></li>
-																	<li><a href="#"><img class="svg" src="assets/img/svg/social/twitter.svg" alt="" /></a></li>
-																	<li><a href="#"><img class="svg" src="assets/img/svg/social/instagram.svg" alt="" /></a>
+													<div class="details w-full float-left">
+														<span class="category inline-block mb-[7px]"><a href="#">Modalbox</a></span>
+														<h3 class="title"><a class="line_effect portfolio_popup" href="#">Beautiful Boat</a></h3>
+													</div>
+												</div>
+
+												<div class="hidden_content_portfolio">
+													<div class="popup_details">
+														<div class="main_details">
+															<div class="textbox">
+																<p>We live in a world where we need to move quickly and iterate on our ideas as flexibly as possible.
+																	Building mockups strikes the ideal balance ease of modification. Building mockups strikes the ideal
+																	balance ease of modification.</p>
+																<p>Mockups are useful both for the creative phase of the project - for instance when you're trying to
+																	figure out your user flows or the proper visual hierarchy - and the production phase when they phase
+																	when they will represent the target product. Building mockups strikes the ideal balance ease of
+																	modification.</p>
+															</div>
+															<div class="detailbox">
+																<ul>
+																	<li>
+																		<span class="first">Client</span>
+																		<span>Alvaro Morata</span>
+																	</li>
+																	<li>
+																		<span class="first">Category</span>
+																		<span><a href="#">Modalbox</a></span>
+																	</li>
+																	<li>
+																		<span class="first">Date</span>
+																		<span>April 10, 2023</span>
+																	</li>
+																	<li>
+																		<span class="first">Share</span>
+																		<ul class="share">
+																			<li><a href="#"><img class="svg" src="assets/img/svg/social/facebook.svg" alt="" /></a></li>
+																			<li><a href="#"><img class="svg" src="assets/img/svg/social/twitter.svg" alt="" /></a></li>
+																			<li><a href="#"><img class="svg" src="assets/img/svg/social/instagram.svg" alt="" /></a>
+																			</li>
+																		</ul>
 																	</li>
 																</ul>
-															</li>
-														</ul>
-													</div>
+															</div>
+														</div>
+														<div class="swiper">
+															<!-- Additional required wrapper -->
+															<div class="swiper-wrapper">
+																<!-- Slides -->
+																<div class="swiper-slide"><img src="assets/img/portfolio/5.jpg" /></div>
+																<div class="swiper-slide"><img src="assets/img/portfolio/6.jpg" /></div>
+																<div class="swiper-slide"><img src="assets/img/portfolio/7.jpg" /></div>
+
+															</div>
+															<!-- If we need pagination -->
+															<div class="swiper-pagination"></div>
+														
+															<!-- If we need navigation buttons -->
+															<div class="swiper-button-prev"></div>
+															<div class="swiper-button-next"></div>
+														
+														</div>
+														</div>
 												</div>
-												<div class="additional_images">
-													<ul>
-														<li>
-															<div class="list_inner">
-																<div class="my_image">
-																	<img src="assets/img/thumbs/4-2.jpg" alt="" />
-																	<div class="main" data-img-url="assets/img/portfolio/5.jpg"></div>
-																</div>
-															</div>
-														</li>
-														<li>
-															<div class="list_inner">
-																<div class="my_image">
-																	<img src="assets/img/thumbs/4-2.jpg" alt="" />
-																	<div class="main" data-img-url="assets/img/portfolio/6.jpg"></div>
-																</div>
-															</div>
-														</li>
-														<li>
-															<div class="list_inner">
-																<div class="my_image">
-																	<img src="assets/img/thumbs/4-2.jpg" alt="" />
-																	<div class="main" data-img-url="assets/img/portfolio/7.jpg"></div>
-																</div>
-															</div>
-														</li>
-													</ul>
+															
+											</li>
+										</ul>
+								</div>
+								
+								<div id="Type2" class="tabcontent">
+									
+									<ul class="owl-carousel gallery_zoom mb-[65px]">
+										<li>
+											<div class="list_inner">
+												<div class="image relative rounded-[4px] overflow-hidden mb-[25px]">
+													<img class="min-w-full relative opacity-0" src="assets/img/thumbs/31-36.jpg" alt="" />
+													<div class="main absolute inset-0 bg-no-repeat bg-cover bg-center"
+														data-img-url="assets/img/portfolio/4.jpg">
+													</div>
+													<a class="elisc_tm_full_link portfolio_popup absolute inset-0 z-[5]" href="#"></a>
+												</div>
+												<div class="details w-full float-left">
+													<span class="category inline-block mb-[7px]"><a href="#">Modalbox</a></span>
+													<h3 class="title"><a class="line_effect portfolio_popup" href="#">Beautiful Boat</a></h3>
 												</div>
 											</div>
-										</div>
-										<!-- /Modalbox Info Start -->
-										
-									</li>
-								</ul>
+									
+											<div class="hidden_content_portfolio">
+												<div class="popup_details">
+													<div class="main_details">
+														<div class="textbox">
+															<p>We live in a world where we need to move quickly and iterate on our ideas as flexibly as
+																possible.
+																Building mockups strikes the ideal balance ease of modification. Building mockups strikes
+																the ideal
+																balance ease of modification.</p>
+															<p>Mockups are useful both for the creative phase of the project - for instance when you're
+																trying to
+																figure out your user flows or the proper visual hierarchy - and the production phase when
+																they phase
+																when they will represent the target product. Building mockups strikes the ideal balance ease
+																of
+																modification.</p>
+														</div>
+														<div class="detailbox">
+															<ul>
+																<li>
+																	<span class="first">Client</span>
+																	<span>Alvaro Morata</span>
+																</li>
+																<li>
+																	<span class="first">Category</span>
+																	<span><a href="#">Modalbox</a></span>
+																</li>
+																<li>
+																	<span class="first">Date</span>
+																	<span>April 10, 2023</span>
+																</li>
+																<li>
+																	<span class="first">Share</span>
+																	<ul class="share">
+																		<li><a href="#"><img class="svg" src="assets/img/svg/social/facebook.svg"
+																					alt="" /></a></li>
+																		<li><a href="#"><img class="svg" src="assets/img/svg/social/twitter.svg"
+																					alt="" /></a></li>
+																		<li><a href="#"><img class="svg" src="assets/img/svg/social/instagram.svg"
+																					alt="" /></a>
+																		</li>
+																	</ul>
+																</li>
+															</ul>
+														</div>
+													</div>
+													<div class="additional_images">
+														<div class="carousel">
+															<!-- Slides will be added dynamically here -->
+															<div id="carouselSlidesContainer"></div>
+													
+															<!-- Navigation Buttons -->
+															<a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+															<a class="next" onclick="changeSlide(1)">&#10095;</a>
+													
+															<!-- Dots -->
+															<div class="dot-container" id="carouselDotsContainer"></div>
+														</div>
+													</div>
+													</div>
+													</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div>
 								<div class="elisc_tm_button" data-position="center">
 									<a href="#">View all projects</a>
 								</div>
@@ -1327,6 +1402,88 @@
 <!--[if lt IE 10]> <script type="text/javascript" src="js/ie8.js"></script> <![endif]-->	
 <script src="assets/js/plugins.js"></script>
 <script src="assets/js/init.js"></script>
+
+<script>
+
+	let slideIndex = 1;
+	initCarousel();
+
+	function initCarousel() {
+		const images = ['assets/img/portfolio/5.jpg', 'assets/img/portfolio/6.jpg', 'assets/img/portfolio/7.jpg', 'assets/img/portfolio/6.jpg'];
+		images.forEach((src, index) => addImageToCarousel(src, index));
+		showSlides(slideIndex);
+	}
+
+	function addImageToCarousel(imageSrc, index) {
+			const container = document.getElementById('carouselSlidesContainer');
+			const slide = document.createElement('div');
+			slide.className = 'sliders';
+			slide.style.display = 'none'; // Initially hide the slide
+			slide.innerHTML = `<img src="${imageSrc}" alt="">`;
+			container.appendChild(slide);
+
+			const dotsContainer = document.getElementById('carouselDotsContainer');
+			const dot = document.createElement('div');
+			dot.className = 'dots';
+			dot.addEventListener('click', () => currentSlide(index + 1));
+			dotsContainer.appendChild(dot);
+	}
+
+	function currentSlide(n) {
+		showSlides(slideIndex = n);
+	}
+
+	function changeSlide(n) {
+		showSlides(slideIndex += n);
+	}
+
+	function showSlides(n) {
+			let slides = document.getElementsByClassName("sliders");
+			let dots = document.getElementsByClassName("dots");
+
+			if (n > slides.length) { slideIndex = 1; }
+			if (n < 1) { slideIndex = slides.length; }
+
+			for (let slide of slides) {
+				slide.style.display = "none";
+			}
+
+			for (let dot of dots) {
+				dot.className = dot.className.replace(" activedots", "");
+			}
+
+			slides[slideIndex - 1].style.display = "block";
+			dots[slideIndex - 1].className += " activedots";
+		}
+
+	function openProjectType(evt, projectTypeName) {
+			var i, tabcontent, tablinks;
+
+			// Hide all elements with class="tabcontent" by default
+			tabcontent = document.getElementsByClassName("tabcontent");
+			for (i = 0; i < tabcontent.length; i++) {
+				tabcontent[i].style.display = "none";
+			}
+
+			// Remove the background color of all tablinks/buttons
+			tablinks = document.getElementsByClassName("tablinks");
+			for (i = 0; i < tablinks.length; i++) {
+				tablinks[i].className = tablinks[i].className.replace(" active", "");
+			}
+
+			// Show the specific tab content
+			document.getElementById(projectTypeName).style.display = "block";
+
+			// Add an "active" class to the button that opened the tab
+			evt.currentTarget.className += " active";
+		}
+
+		document.addEventListener('DOMContentLoaded', function () {
+				// Open the first tab by default
+				document.querySelector('.tablinks').click();
+			});
+</script>
+
 <!-- /SCRIPTS -->
 
 </body>
