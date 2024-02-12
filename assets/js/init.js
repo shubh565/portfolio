@@ -11,6 +11,7 @@ jQuery(document).ready(function(){
 	// here all ready functions
 	
 	elisc_tm_modalbox();
+	elisc_tm_tabs();
 	elisc_tm_movingbox();
 	elisc_tm_page_transition();
 	elisc_tm_trigger_menu();
@@ -41,6 +42,35 @@ jQuery(document).ready(function(){
 // -----------------------------------------------------
 // ---------------   FUNCTIONS    ----------------------
 // -----------------------------------------------------
+
+// -----------------------------------------------------
+// ---------------   TABS  -----------------------------
+// -----------------------------------------------------
+
+function elisc_tm_tabs(){
+	"use strict";
+	
+	jQuery(".js_tap_btn").click(function() {
+			jQuery(".js_tap_btn").removeClass("active text-[#130F49]").addClass("text-grey-400 hover:text-blue-950]"); 
+			jQuery(this).removeClass("text-grey-400 hover:text-blue-950]").addClass("active text-[#130F49]");
+
+			let tab_to_show = jQuery(this).data("tab_id");
+
+			// Start the opacity transition
+			jQuery(".js_tab_view").css('opacity', '0');
+		  
+			// Wait for the transition to finish before hiding and showing the tabs
+			setTimeout(() => {
+			  jQuery(".js_tab_view").addClass("hidden").css('opacity', '');
+			  jQuery(`#${tab_to_show}`).removeClass("hidden");
+			  
+			  // You need to trigger a reflow so the browser knows to start the opacity transition
+			  jQuery(`#${tab_to_show}`).css('opacity');
+			  jQuery(`#${tab_to_show}`).css('opacity', '1');
+			}, 400); // This should match the duration of your transition
+		  
+	  });
+}
 
 // -----------------------------------------------------
 // --------------------   MODALBOX    ------------------

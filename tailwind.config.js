@@ -19,6 +19,13 @@ module.exports = {
         "yellow-color": "var(--yellow-color)",
         "blue-color": "var(--blue-color)",
       },
+      transitionProperty: {
+        'height': 'height',
+        'spacing': 'margin, padding',
+      },
+      transitionDuration: {
+        '400': '400ms',
+      },
     },
   },
 }

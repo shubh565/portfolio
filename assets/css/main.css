@@ -1406,6 +1406,10 @@ h6 {
   margin-bottom: 0px;
 }
 
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
 .mb-\[120px\] {
   margin-bottom: 120px;
 }
@@ -2100,6 +2104,10 @@ h6 {
   grid-auto-flow: column dense;
 }
 
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .flex-row {
   flex-direction: row;
 }
@@ -2282,6 +2290,10 @@ h6 {
 
 .justify-items-stretch {
   justify-items: stretch;
+}
+
+.gap-4 {
+  gap: 1rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -2830,6 +2842,10 @@ h6 {
   background-position: center;
 }
 
+.bg-left {
+  background-position: left;
+}
+
 .bg-repeat {
   background-repeat: repeat;
 }
@@ -2891,9 +2907,18 @@ h6 {
      object-fit: scale-down;
 }
 
+.p-0 {
+  padding: 0px;
+}
+
 .px-0 {
   padding-left: 0px;
   padding-right: 0px;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .px-\[20px\] {
@@ -2924,6 +2949,11 @@ h6 {
 .py-0 {
   padding-top: 0px;
   padding-bottom: 0px;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .py-\[120px\] {
@@ -3575,6 +3605,16 @@ h6 {
   transition-duration: 150ms;
 }
 
+.transition-opacity {
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-400 {
+  transition-duration: 400ms;
+}
+
 .ease-in {
   transition-timing-function: cubic-bezier(0.4, 0, 1, 1);
 }
@@ -3599,8 +3639,20 @@ h6 {
   --blue-color: #A5A6FF;
 }
 
+.portfolio-list-tab-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin-top: 2rem;
+}
+
 .hover\:font-bold:hover {
   font-weight: 700;
+}
+
+.hover\:text-blue-950:hover {
+  --tw-text-opacity: 1;
+  color: rgb(23 37 84 / var(--tw-text-opacity));
 }
 
 .before\:hover\:text-center:hover::before {
