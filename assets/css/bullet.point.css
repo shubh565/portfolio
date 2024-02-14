@@ -1,0 +1,16 @@
+.tabbed-list li {
+    margin-left: 20px; /* Adjust as needed to mimic tab spacing */
+    list-style-type: disc; /* Use disc for bullet points */
+}
+.custom-list {
+        list-style: none; /* Removes default list styling */
+        padding-left: 0; /* Removes default padding */
+}
+.custom-list li:before {
+        content: "•\00a0\00a0"; /* Bullet character followed by two spaces (non-breaking spaces) */
+        color: black; /* Bullet color */
+}
+.custom-list li {
+        padding-left: 1em; /* Adds indentation to list items */
+        text-indent: -1em; /* Negates part of the padding to align bullets properly */
+}
