@@ -83,15 +83,18 @@
                     <div
                         class="topbar_inner w-full h-full clear-both flex items-center justify-between py-0 px-[20px]"
                     >
-                        <div class="logo" data-type="image">
+                        <div class="logo" data-type="text">
                             <!-- You can use text or image as logo. data-type values are: "image" and "text"  -->
-                            <a class="image" href="#"
-                                ><img
+                            <a class="image" href="#">
+                                <img
                                     class="max-w-[100px] max-h-[40px]"
                                     src="assets/img/logo/logo.png"
                                     alt=""
-                            /></a>
-                            <a class="text" href="#"><span>R.Elisc</span></a>
+                                />
+                            </a>
+                            <a class="text" href="#">
+                                <span>Shubh Utekar</span>
+                            </a>
                         </div>
                         <div class="trigger">
                             <div class="hamburger hamburger--slider">
@@ -215,11 +218,10 @@
                             </div>
                             <div class="name w-full float-left mt-[-19px]">
                                 <h3>
-                                    <span
-                                        >Shubh Utekar<span class="back"
-                                            >Shubh Utekar</span
-                                        ></span
-                                    >
+                                    <span>
+                                        Shubh Utekar
+                                        <span class="back"> Shubh Utekar </span>
+                                    </span>
                                 </h3>
                             </div>
                         </div>
@@ -415,9 +417,20 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div class="right w-1/2 pl-[50px]">
+                                        <div
+                                            class="right w-1/2 pl-[50px] middle:hidden"
+                                        >
                                             <img
                                                 src="assets/img/about/profile_pic.jpeg"
+                                                alt=""
+                                            />
+                                        </div>
+                                        <div
+                                            class="right pl-[50px] hidden middle:flex small:justify-center"
+                                        >
+                                            <img
+                                                class="w-[300px] rounded-full border-solid border-4 border-main-color"
+                                                src="assets/img/about/profile_pic_mobile.jpeg"
                                                 alt=""
                                             />
                                         </div>
@@ -444,8 +457,9 @@
                                             >
                                                 <span
                                                     class="mini block uppercase font-medium mb-[12px]"
-                                                    >- Nice to meet you!</span
                                                 >
+                                                    - Nice to meet you!
+                                                </span>
                                                 <h3
                                                     class="name font-extrabold text-[40px]"
                                                 >
